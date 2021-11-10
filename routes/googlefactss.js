@@ -36,15 +36,21 @@ router
                 const textBubble = ".js-message_text"
                 const parent = ".service_message"
 
+                var hashTags = undefined
+
                 $(messageBubble, html).each(function () {
 
                     const catchMessage = $(this)
                         .find(`${textBubble}:contains("#")`)
                         .text()
-                    const filteredMessage = catchMessage.replace(unwantedWords, '')                   
+                    const filteredMessage = catchMessage.replace(unwantedWords, '')
 
                     const parentDiv = $(this)
                         .parent(parent)
+
+                    hashTags = catchMessage
+                        .split(' ')
+                        .filter(hash => hash.startsWith('#'))
 
                     parentDiv.length < 0 ? null : newFact(filteredMessage)
                 })
@@ -54,7 +60,8 @@ router
                     filteredMessage.length > 0
                         ? googleFacts.push({
 
-                            fact: filteredMessage
+                            fact: filteredMessage,
+                            hashtags: hashTags
 
                         }) : null
 
