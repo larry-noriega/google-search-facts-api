@@ -3,7 +3,7 @@ const PORT = 8000
 const express = require('express')
 const app = express()
 
-const googlefactss = require('./routes/googlefactss')
+const googlefactss = require('./routes/googlefactss-min')
 
 app.use(express.json())
 app.use('/googlefactss', googlefactss)

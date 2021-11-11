@@ -35,8 +35,10 @@ router
                 const messageBubble = ".tgme_widget_message_bubble"
                 const textBubble = ".js-message_text"
                 const parent = ".service_message"
+                const elementMultimedia = ".tgme_widget_message_link_preview"
 
                 var hashTags = undefined
+                var url = undefined
 
                 $(messageBubble, html).each(function () {
 
@@ -47,6 +49,10 @@ router
 
                     const parentDiv = $(this)
                         .parent(parent)
+
+                    url = $(this)
+                        .find(`${elementMultimedia}`)
+                        .attr("href")
 
                     hashTags = catchMessage
                         .split(' ')
@@ -61,6 +67,7 @@ router
                         ? googleFacts.push({
 
                             fact: filteredMessage,
+                            media: url,
                             hashtags: hashTags
 
                         }) : null

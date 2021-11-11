@@ -35,7 +35,10 @@ npm i
 4.  Execute `npm run start` & go live on [http://localhost:8000/googlefactss/](http://localhost:8000/googlefactss/)
 
 ## Log
-- 10/11/2021: Hastag Topic feature added.
+- 11/11/2021:
+    - Feature added: Ilustrated Multimedia source.
+    - Minified version added.
+- 10/11/2021: Feature added: Hastag Topic.
 - 08/11/2021: Innitial Commit.
   
 # Disclaimer
