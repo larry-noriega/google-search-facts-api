@@ -1,4 +1,3 @@
-//https://www.youtube.com/watch?v=iM_S4RczozU
 "use strict"
 const axios = require("axios")
 const cheerio = require("cheerio")
