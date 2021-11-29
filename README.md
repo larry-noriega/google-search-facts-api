@@ -35,6 +35,8 @@ npm i
 4.  Execute `npm run start` & go live on [http://localhost:8000/googlefactss/](http://localhost:8000/googlefactss/)
 
 ## Log
+- 29/11/2021:
+    - Clean filter by regex expression
 - 11/11/2021:
     - Feature added: Ilustrated Multimedia source.
     - Minified version added.
